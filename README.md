@@ -1,4 +1,4 @@
-# BookOracle
+# AskDocs
 📖 RAG-powered QA System for Books & Articles
 This repository contains a Retrieval-Augmented Generation (RAG) application that enables users to ask questions about books, research papers, and various documents. The system retrieves relevant excerpts and generates accurate responses, providing a powerful AI-driven knowledge assistant.
 
