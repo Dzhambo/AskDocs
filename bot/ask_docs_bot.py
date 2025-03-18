@@ -5,7 +5,7 @@ import faiss
 import numpy as np
 import sqlite3
 import os
-from model.llm import LLM
+from llm import LLM
 
 class AskDocsBot:
     def __init__(self):
@@ -63,7 +63,7 @@ class AskDocsBot:
         
         # Генерируем ответ с помощью LLM
         try:
-            response = self.llm.generate(query, context)
+            response = self.llm.generate_response(query, context)
             return response
         except Exception as e:
             print(f"Ошибка при генерации ответа: {e}")
