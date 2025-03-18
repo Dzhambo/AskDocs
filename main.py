@@ -3,12 +3,12 @@ import os
 from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-from bot.config import Config
+from config import *
 from bot.voice_handler import VoiceHandler
 from bot.ask_docs_bot import AskDocsBot
 from bot.history_manager import HistoryManager
 from bot.database import Database
-from llm import LLM
+from model.llm import LLM
 from config import LOCAL_LLM_CONFIG
 import asyncio
 from pathlib import Path
@@ -27,7 +27,6 @@ logging.basicConfig(
 load_dotenv()
 
 # Инициализация компонентов
-config = Config()
 ask_docs_bot = AskDocsBot()
 voice_handler = VoiceHandler()
 history_manager = HistoryManager()

@@ -5,7 +5,7 @@ import faiss
 import numpy as np
 import sqlite3
 import os
-from llm import LLM
+from model.llm import LLM
 
 class AskDocsBot:
     def __init__(self):
