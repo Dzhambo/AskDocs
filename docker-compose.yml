@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    volumes:
+      - ./books:/app/books  # Том для хранения книг
+      - ./books.db:/app/books.db  # Том для базы данных
+      - ./.env:/app/.env  # Том для конфигурации
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1 
